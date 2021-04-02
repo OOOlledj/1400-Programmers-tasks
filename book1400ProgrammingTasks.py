@@ -50,5 +50,4 @@ def TaskAccomp():
         
     TasksToDo(toDo)
 
-TaskAccomp()     
-    
+TaskAccomp()
