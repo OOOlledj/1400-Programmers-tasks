@@ -26,12 +26,20 @@ def ChapTaskGen():
     
 def TasksToDo(toDo):
     '''Print tasks to do'''
+    pythonFile = ''
     for i in toDo:
-        print(i)
+        pythonFile += i
+        if i==toDo[len(toDo)-1]:
+            pythonFile += '.py'
+        else:
+            pythonFile += ' '
+    with open('solved/' + pythonFile, 'w'):
+        print(pythonFile)
+
 
 def TaskAccomp():
     
-    file = open('book1400Container.txt', 'r+')
+    file = open('Container.txt', 'r+')
     finished = file.read()
     finished = finished.split(' ')
     #print(finished)
